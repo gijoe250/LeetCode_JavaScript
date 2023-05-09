@@ -1,7 +1,8 @@
 (function (){
     "use strict";
 
-    console.log(twoSum([2,7,11,15], 9))
+    // console.log(twoSum([2,7,11,15], 9))
+    console.log(twoSumFast([2, 7, 11, 15], 9))
 
     /** TwoSum https://leetcode.com/problems/two-sum/
      * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -21,5 +22,21 @@
             }
         }
         return answer
+    }
+
+    function twoSumFast(nums : number[], target : number) : number[]{
+        const map : { [id: number]: number; } = {};
+        let answer : number[] = [];
+        map[target-nums[0]] = 0;
+        for (let i =1 ; i<nums.length; i++){
+            console.log(Object.keys(map));
+            if(map[nums[i]] != undefined){
+                console.log("Key Found")
+                answer.push(map[nums[i]], i);
+                return answer;
+            }
+            map[target-nums[i]] = i;
+        }
+        return answer;
     }
 })();
