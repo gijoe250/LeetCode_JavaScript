@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./built",
     "allowJs": true,
-    "target": "es5",
+    "target": "es6",
+    "removeComments": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "strict" : true
   },
-  "include": ["./Arrays/**/*", "./TypeScriptPractice/**/*"]
+  "include": ["./Arrays/**/*", "./Strings/**/*", "./TypeScriptPractice/**/*"]
 }
