@@ -26,7 +26,10 @@
     console.log(isValid("([)]"
     ))
 
-
+    // Input: s = "]"
+    // Output: false
+    console.log(isValid("]"
+    ))
 
     /** Valid Parenthesis https://leetcode.com/problems/valid-parentheses/
      * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -41,6 +44,7 @@
      */
     function isValid(s: string): boolean {
         let stack = []
+        /*test*/
         let answer = true
         for (let paren of s){
             if(paren == "(" || paren == "{" || paren == "["){
